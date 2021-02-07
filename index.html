@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!--    подкоючение bootstrap-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!--    подкоючение шррифтов-->
+    <script src="https://use.fontawesome.com/e3bd3298f7.js"></script>
+    <!--    подкоючение Jquery-->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!--    подкоючение VUE-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!--    подкоючение библиотеки Swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--    подкоючение ститлей основных-->
+    <link rel="stylesheet" href="src/css/animate.css"/>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/swiperSlider.css">
+    <title>GameLanding</title>
+</head>
+<body>
+<div id="app">
+    <div id="main" class="backgroundHome">
+        <div class="scene">
+            <div class="backgroundHomeImg"></div>
+        </div>
+        <header class="paralaxxxxHeader">
+            <div class="row container">
+                <div class="col-2 col-sm-3 d-md-none d-xl-block col-xl-1">
+                    <img class="logoHeader" src="src/images/logo.png" alt="">
+                </div>
+                <div class="col-xl-7 col-lg-9 col-md-10 d-none d-md-block offset-xl-1">
+                    <ul class="linkHeader dopClass">
+                        <a @click="goTo('.scrollto1', '#main', 0)" class="scrollto1">
+                            <li>main</li>
+                        </a>
+                        <a @click="goTo('.scrollto2', '#backgroundDiscription', -150)" class="scrollto2">
+                            <li>about</li>
+                        </a>
+                        <a @click="goTo('.scrollto3', '#toBackgroundFeatures', -100)" class="scrollto3">
+                            <li>game features</li>
+                        </a>
+                        <a @click="goTo('.scrollto4', '#systemRequirements', -100)" class="scrollto4">
+                            <li>System requirements</li>
+                        </a>
+                        <a @click="goTo('.scrollto5', '#backgroundEnd', -100)" class="scrollto5">
+                            <li>quotes</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class=" col-5 col-sm-2 col-xl-1 col-lg-1 col-md-2 offset-3 offset-sm-6 offset-md-0 offset-xl-1">
+                    <div id="appJs">
+                        <p @click='changeLanguage= !changeLanguage' class="changeLanguage">eng
+                        <div :class="{'active':changeLanguage}" class="changeLanguageBird"></div>
+                        <ul :class="{'active': changeLanguage}" class="changeLanguageList">
+                            <li @click='changeLanguage= !changeLanguage'>RUS</li>
+                            <li @click='changeLanguage= !changeLanguage'>fra</li>
+                            <li @click='changeLanguage= !changeLanguage'>DEU</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-2 col-sm-1 d-md-none d-block ">
+                    <div @click="changeMenu" :class="{'active': changeMenuMod}" class="menuBurger">
+                        <span class=""></span>
+                    </div>
+                    <div v-bind:class="{'active': changeMenuMod}" class="menuItems">
+                        <nav class="menuItemsNav">
+                            <li @click="goTo('.scrollto1', '#main', 0)" class="navItem">main</li>
+                            <li @click="goTo('.scrollto2', '#backgroundDiscription', -150)" class="navItem">about</li>
+                            <li @click="goTo('.scrollto3', '#toBackgroundFeatures', -100)" class="navItem">game
+                                features
+                            </li>
+                            <li @click="goTo('.scrollto4', '#systemRequirements', -100)" class="navItem">System
+                                requirements
+                            </li>
+                            <li @click="goTo('.scrollto5', '#backgroundEnd', -100)" class="navItem">quotes</li>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-lg-2 d-none d-lg-block justify-content-between iconGameStore">
+                    <img src="src/images/xboxIcon.svg" alt="">
+                    <img src="src/images/steamIcon.svg" alt="">
+                </div>
+        </header>
+        <div class="info" >
+            <div class="row container">
+                <div class="col-12 col-sm-12 text-center ">
+                    <h1 class="InfoTittle wow fadeInLeft paralaxxxxTittle" data-wow-duration="2.5s"
+                        data-wow-offset="80">survive at all costs</h1>
+                    <h3 class="subInfoTittle wow fadeInRight tittle paralaxxxxSubTittle" data-wow-duration="2.5s"
+                        data-wow-offset="80">experience new battle royale game</h3>
+                    <a class="hoverEffect" target="blank" href="https://store.steampowered.com/">
+                        <button id="123" class="buyInSteam paralaxxxxBtn wow fadeInUp" data-wow-duration="2.5s"
+                                data-wow-offset="80"> Buy now on Steam | $14.99
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="row container dopClass">
+                <a class="scrollto6">
+                    <div class=" col-12 col-sm-12 text-center">
+                        <span @click="goTo('.scrollto2', '#backgroundDiscription', -150)"
+                              class="btnNext">the story</span>
+                        <div>
+                            <img class="" src="src/images/scrollDown.svg" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="backgroundDiscription" class="backgroundDiscription">
+    <div class="row container">
+        <div class="col-xl-6 col-lg-5 col-md-12">
+            <p class="supTittleDiscription suptittle wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">what
+                is sos?</p>
+            <h3 class="tittleDiscription tittle wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">social
+                battle royale game</h3>
+            <p class="SubTittleDescription1 d-none d-lg-block wow fadeInLeft" data-wow-duration="2.5s"
+               data-wow-offset="80">Each round, <b>you</b> and <b>15</b> other contestants
+                compete to
+                escape a deadly island filled with monsters. The trick is: three people can survive. Will you run
+                solo or form friendships with others to escape? </p>
+            <p class="SubTittleDescription2 d-none d-lg-block wow fadeInLeft" data-wow-duration="2.5s"
+               data-wow-offset="80">Making the right decisions could be the
+                difference between life and death.</p>
+            <div class="col-12 col-sm-12 d-block d-lg-none">
+                <p class="SubTittleDescription1">Each round, <b>you</b> and <b>15</b> other contestants compete to
+                    escape a deadly island filled with monsters. The trick is: three people can survive. Will you run
+                    solo or form friendships with others to escape? </p>
+                <p class="SubTittleDescription2">Making the right decisions could be the
+                    difference between life and death.</p>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-12 justify-content-between wow fadeInUp" data-wow-duration="3.5s"
+             data-wow-offset="150">
+            <div class="sliderSwipper swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="imgControll" src="src/images/slide1.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="imgControll" src="src/images/slide2.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="imgControll" src="src/images/slide3.svg" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <img class="swiper-button-next" src="src/images/switch.svg" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="toBackgroundFeatures" class="backgroudFeatures">
+    <div>
+        <div class="row container">
+            <div class="col-12 col-sm-7 col-xl-5 offset-xl-6 ">
+                <div class="">
+                    <p class="supTittleFeatures suptittle wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">
+                        what`s so special?</p>
+                    <h3 class="TittleFeatures tittle wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="80">
+                        features</h3>
+                    <div class="accardion">
+                        <div class="accardionItem wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">
+                            <input class="accardionItemInput" id="accardion-1" name="trigger" type="radio" checked>
+                            <label class="accardionItemTrigger" for="accardion-1">
+                                survival at all costs
+                            </label>
+                            <div class="accardionContent">
+                                You have 30 minutes to find a relic,
+                                signal for extraction, and grabone of three spots on the rescue chopper.
+                            </div>
+                        </div>
+                        <div class="accardionItem wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="80">
+                            <input class="accardionItemInput" id="accardion-2" name="trigger" type="radio">
+                            <label class="accardionItemTrigger" for="accardion-2">
+                                create allies and enemies
+                            </label>
+                            <div class="accardionContent">
+                                You have 30 minutes to find a relic,
+                                signal for extraction, and grabone of three spots on the rescue chopper.
+
+                            </div>
+                        </div>
+                        <div class="accardionItem wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">
+                            <input class="accardionItemInput" id="accardion-3" name="trigger" type="radio">
+                            <label class="accardionItemTrigger" for="accardion-3">
+                                impress the audience
+                            </label>
+                            <div class="accardionContent">
+                                You have 30 minutes to find a relic,
+                                signal for extraction, and grabone of three spots on the rescue chopper.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="systemRequirements" class="systemRequirements">
+    <div class="row container">
+        <div class="col-xl-12 text-center">
+            <h4 class="supTittleSystemRequirements wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">can my
+                computer run this game?</h4>
+            <h2 class="tittleSystemRequirements tittle wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="80">
+                system requirements</h2>
+        </div>
+    </div>
+    <div class="row container ">
+        <div class="col-xl-3 col-lg-4 col-sm-6 col-6 p-0 wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">
+            <div class="borderSystemRequirements">
+                <h3 class="tittleDescriptionRequirement">os:</h3>
+                <p class="descriptionRequirement">Windows 7 64-bit only (No OSX support at this time)</p>
+            </div>
+            <div class="borderSystemRequirements">
+                <h3 class="tittleDescriptionRequirement">memory:</h3>
+                <p class="descriptionRequirement">8 GB RAM</p>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-sm-6 col-6 p-0 wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="80">
+            <div class="borderSystemRequirements">
+                <h3 class="tittleDescriptionRequirement">processor:</h3>
+                <p class="descriptionRequirement">Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ</p>
+            </div>
+            <div class="borderSystemRequirements">
+                <h3 class="tittleDescriptionRequirement">storage:</h3>
+                <p class="descriptionRequirement">8 GB available space</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row container wow fadeInUp "
+         data-wow-duration="2.5s"
+         data-wow-offset="80">
+        <div class="col-xl-6 col-lg-8 col-sm-12 col-12 border-bottom-0 p-0 borderSystemRequirements">
+            <h3 class="tittleDescriptionRequirement">graphics:</h3>
+            <p class="descriptionRequirement">NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader
+                Model 5)</p>
+            <span class="topBorder"></span>
+            <span class="leftBorder"></span><span class="centerBorder"></span><span class="rightBorder"></span>
+        </div>
+    </div>
+</div>
+<div id="backgroundEnd" class="backgroundEnd">
+    <div class="row container">
+        <div class="col-xl-5 col-lg-5 col-md-8 ">
+            <h3 class="quotesSubTittle supTittle wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">what
+                people think?</h3>
+            <h2 class="quotesTittle tittle wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">press
+                quotes</h2>
+            <p class="quotesDescription text-center text-sm-left wow fadeInLeft" data-wow-duration="2.5s"
+               data-wow-offset="80">Our goal is to create a product and service that
+                you’re satisfied with and use
+                it every day. This is why we’re constantly working on our services to make it better every day and
+                really listen to what our users has to say.</p>
+            <div class="d-none d-sm-block">
+                <button data-micromodal-trigger="modal-1" class="btnReadMore wow fadeInLeft" data-wow-duration="2.5s"
+                        data-wow-offset="80">read more
+                    testimonials
+                </button>
+
+            </div>
+            <div class="col-12 col-sm-12 d-block d-sm-none text-center">
+                <button data-micromodal-trigger="modal-1" class="btnReadMore wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">read more
+                    testimonials
+                </button>
+            </div>
+        </div>
+        <div class="offset-xl-1 col-xl-6 col-lg-7 col-md-12">
+            <div class="cardMessageItem dopContainer wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="80">
+                <div class="row dopContainer">
+                    <div class="col-5 col-sm-3">
+                        <img class="cardEllipse" src="src/images/Ellipse.png" alt="">
+                        <img class="cardPhoto" src="src/images/photo1.png" alt="">
+                    </div>
+                    <div class="col-6 col-sm-4 p-0">
+                        <p class="nameUser">evan lahti</p>
+                        <p class="discriptionUser">PC Gamer</p>
+                    </div>
+                    <div class="col-1 col-sm-1 offset-0 offset-sm-4 p-0">
+                        <img class="imageTwitter" src="src/images/twitter.svg" alt="">
+                    </div>
+                </div>
+                <div class="row dopContainer">
+                    <div class="col-12 col-sm-12">
+                        <p class="messageQuotes">“One of my gaming highlights of the year.”</p>
+                        <p class="dateQuotes">October 18, 2018</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardMessageItem dopContainer wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="80">
+                <div class="row dopContainer">
+                    <div class="col-5 col-sm-3">
+                        <img class="cardEllipse" src="src/images/Ellipse.png" alt="">
+                        <img class="cardPhoto" src="src/images/photo2.png" alt="">
+                    </div>
+                    <div class="col-6 col-sm-4 p-0">
+                        <p class="nameUser">jada griffin</p>
+                        <p class="discriptionUser">Nerdreactor</p>
+                    </div>
+                    <div class="col-1 col-sm-1 offset-0 offset-sm-4 p-0">
+                        <img class="imageTwitter" src="src/images/twitter.svg" alt="">
+                    </div>
+                </div>
+                <div class="row dopContainer">
+                    <div class="col-12 col-sm-12">
+                        <p class="messageQuotes">“The next big thing in the world of streaming and survival games.”</p>
+                        <p class="dateQuotes">December 21, 2018</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardMessageItem dopContainer wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="80">
+                <div class="row  dopContainer">
+                    <div class="col-5 col-sm-3">
+                        <img class="cardEllipse" src="src/images/Ellipse.png" alt="">
+                        <img class="cardPhoto" src="src/images/photo3.png" alt="">
+                    </div>
+                    <div class="col-6 col-sm-4 p-0">
+                        <p class="nameUser">aaron williams</p>
+                        <p class="discriptionUser">Uproxx</p>
+                    </div>
+                    <div class="col-1 col-sm-1 offset-0 offset-sm-4 p-0">
+                        <img class="imageTwitter" src="src/images/twitter.svg" alt="">
+                    </div>
+                </div>
+                <div class="row dopContainer">
+                    <div class="col-12 col-sm-12">
+                        <p class="messageQuotes">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”</p>
+                        <p class="dateQuotes">December 24, 2018</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row container ">
+        <div class="col-xl-5 col-md-5 col-sm-5 col-5">
+            <img class="imgHead" src="src/images/imageHead.png" alt="">
+        </div>
+        <div class="col-xl-7 col-md-7 col-sm-7 col-7">
+            <p class="supTittleSubscribe supTittle wow fadeInUp" data-wow-duration="2.5s" data-wow-offset="80">want to
+                stay in touch?</p>
+            <h2 class="tittleSubscribe tittle wow fadeInUp" data-wow-duration="2.5s" data-wow-offset="80">newsletter
+                subscribe</h2>
+            <p class="subTittleSubscribe wow fadeInUp" data-wow-duration="2.5s" data-wow-offset="80">In order to start
+                receiving our news, all you have to do is enter your email
+                address. Everything else will be taken care of by us. We will send you emails containing information
+                about game. We don’t spam.</p>
+            <div class="row wow fadeInUp" data-wow-duration="2.5s" data-wow-offset="80">
+                <div class="col-xl-7 col-md-7 col-sm-12 col-12 d-none d-sm-block">
+                    <span class="placeholderForInput">Your email address</span>
+                    <input ref="inputTop" class="inputSubscribe" type="email">
+                </div>
+                <div class="col-xl-5 col-md-5 col-sm-12 col-12 d-none d-sm-block">
+                    <button @click='nullInputTop' class="btnSubscribe">Subscribe now</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row d-block d-sm-none">
+            <div class="col-12">
+                <span class="placeholderForInput">Your email address</span>
+                <input ref="inputDown" class="inputSubscribe" type="email" >
+            </div>
+            <div class="col-12">
+                <button @click="nullInput" class="btnSubscribe">Subscribe now</button>
+            </div>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col-lg-1 col-md-12 col-sm-12 col-12 text-center">
+            <img class="logoBottom" src="src/images/logo.png" alt="">
+        </div>
+        <div class="col-lg-7 col-md-9 col-sm-12 col-12 text-center">
+            <ul class="navFooter dopClass">
+                <a @click="goTo('.scrollto1', '#main', 0)" class="scrollto1">
+                    <li>main</li>
+                </a>
+                <a @click="goTo('.scrollto2', '#backgroundDiscription', -150)" class="scrollto2">
+                    <li>about</li>
+                </a>
+                <a @click="goTo('.scrollto3', '#toBackgroundFeatures', -100)" class="scrollto3">
+                    <li>game features</li>
+                </a>
+                <a @click="goTo('.scrollto4', '#systemRequirements', -100)" class="scrollto4">
+                    <li>System requirements</li>
+                </a>
+                <a @click="goTo('.scrollto5', '#backgroundEnd', -100)" class="scrollto5">
+                    <li>quotes</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-12 col-12 text-center justify-content-between linkToSociaNetworks">
+            <div class="row">
+                <div class="offset-sm-0 offset-md-4 col-sm-3 col-md-2 col-3">
+                    <a href=""><i class="fa fa-facebook-f"></i></a>
+                </div>
+                <div class="col-md-2 col-sm-3 col-3">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="col-md-2 col-sm-3 col-3">
+                    <a href=""><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-md-2 col-sm-3 col-3">
+                    <a href=""><i class="fa fa-twitch"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <hr>
+    </div>
+    <div id="End" class="row container footer">
+        <div class="col-lg-4 col-md-6 col-12 text-center">
+            <p class="copyrightInFooter">&copy; 2018 Outpost Games, Inc. All Rights Reserved</p>
+        </div>
+        <div class="col-lg-6 col-md-6 offset-lg-2 d-none d-sm-block">
+            <p class="policyInFooter">Privacy Policy | Terms of Services | Code of Conduct </p>
+        </div>
+        <div class="col-sm-12 col-12 d-block d-sm-none">
+            <p class="policyInFooter">Privacy Policy <br> | Terms of Services |<br> Code of Conduct </p>
+        </div>
+    </div>
+</div>
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">
+                    Manual
+                </h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <h3>
+                    What does a hero really need?
+                </h3>
+                <p>
+                    Such a huge selection! How can I last longer in battle? What ability will bring my opponents to
+                    their knees? Does the Divine Rapier fit my boots? Even the greatest heroes need mentors to help them
+                    learn the basics of strategy through guides and hero builds.
+                    Now, in the Guides section of the Steam Community, you can view carefully crafted walkthroughs for
+                    your favorite heroes. In addition, you can subscribe to item assemblies that, right in the game,
+                    will give you advice on what (and when) abilities to learn and what items will best suit you in a
+                    given situation.
+                    As for the heroes you already know like the back of your hand, you can create your own builds for
+                    them, and then share them with your friends and the Dota 2 community.
+                </p>
+            </main>
+            <footer class="modal__footer">
+                <!--                <button class="modal__btn modal__btn-primary">Continue</button>-->
+                <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script>
+    MicroModal.init();
+</script>
+<script src="src/js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+        {mobile: false}
+    )
+    wow.init();
+</script>
+<!--Подключение библиотеки SwiperSlider-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="src/js/slider.js"></script>
+
+<script src="src/js/app.js"></script>
+
+
+</body>
+</html>

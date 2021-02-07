@@ -1,0 +1,20 @@
+{
+  "name": "gameporoject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@splidejs/vue-splide": "^0.3.5",
+    "bootstrap": "^5.0.0-beta1",
+    "jquery": "^3.5.1",
+    "micromodal": "^0.4.6",
+    "swiper": "^6.4.10",
+    "vue-agile": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ALex",
+  "license": "ISC"
+}

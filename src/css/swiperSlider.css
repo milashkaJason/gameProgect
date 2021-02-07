@@ -1,0 +1,37 @@
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    width: auto;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 60px;
+}
+.swiper-pagination-bullet {
+    background-color: #eee;
+    padding: 7px;
+}
+
+
+@media screen and (max-width: 576px) {
+    .imgControll {
+        max-width: 55%;
+    }
+}
+.sliderSwipper {
+    margin-top: 150px;
+}
