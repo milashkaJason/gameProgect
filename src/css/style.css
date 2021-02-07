@@ -888,6 +888,9 @@ hoverEffect:hover {
 .infoZIndex {
     z-index: -1;
 }
+.btnReadMoreHelper {
+    display: none;
+}
 
 
 /*quotes    page       end*/

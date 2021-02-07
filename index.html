@@ -262,15 +262,14 @@
                 you’re satisfied with and use
                 it every day. This is why we’re constantly working on our services to make it better every day and
                 really listen to what our users has to say.</p>
-            <div class="d-none d-sm-block">
-                <button data-micromodal-trigger="modal-1" class="btnReadMore wow fadeInLeft" data-wow-duration="2.5s"
+            <div id="bntRead" class="d-none d-sm-block">
+                <button class="btnReadMore wow fadeInLeft" data-wow-duration="2.5s"
                         data-wow-offset="80">read more
                     testimonials
                 </button>
-
             </div>
             <div class="col-12 col-sm-12 d-block d-sm-none text-center">
-                <button data-micromodal-trigger="modal-1" class="btnReadMore wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">read more
+                <button data-micromodal-trigger="mOdAl" class="btnReadMore wow fadeInLeft" data-wow-duration="2.5s" data-wow-offset="80">read more
                     testimonials
                 </button>
             </div>
@@ -364,7 +363,6 @@
                     <button @click='nullInputTop' class="btnSubscribe">Subscribe now</button>
                 </div>
             </div>
-
         </div>
         <div class="row d-block d-sm-none">
             <div class="col-12">
@@ -432,16 +430,17 @@
         </div>
     </div>
 </div>
-<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+
+<div class="modal micromodal-slide" id="mOdAl" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="mOdAl-title">
             <header class="modal__header">
-                <h2 class="modal__title" id="modal-1-title">
+                <h2 class="modal__title" id="mOdAl-title">
                     Manual
                 </h2>
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </header>
-            <main class="modal__content" id="modal-1-content">
+            <main class="modal__content" id="mOdAl-content">
                 <h3>
                     What does a hero really need?
                 </h3>
@@ -465,7 +464,10 @@
     </div>
 </div>
 
+<button data-micromodal-trigger="mOdAl"  class="btnReadMoreHelper"></button>
+
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
 <script>
     MicroModal.init();
 </script>

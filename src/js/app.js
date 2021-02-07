@@ -25,6 +25,8 @@ new Vue({
     }
 })
 
+
+
 new Vue({
     el: '#backgroundEnd',
     data: {
@@ -44,6 +46,20 @@ new Vue({
         }
     }
 })
+// new Vue({
+//     el: '#bntRead',
+//     data: {},
+//     methods: {
+//         goToHelperBtn: function () {
+//             document.querySelector(".btnReadMoreHelper").click();
+//         }
+//     }
+// })
+document.querySelector(".btnReadMore").addEventListener('click', provider)
+function provider () {
+    document.querySelector(".btnReadMoreHelper").click();
+}
+
 
 document.addEventListener("mousemove", paralax);
 function paralax(event) {
